@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8" />
+
+		<style>
+			.bg
+				{ background-color : #eed; }
+
+			.block
+			{
+				font-size : 0px;
+				padding   : 6px 9px;
+			}
+
+			.body
+			{
+				background-image    : url( 'bg.png' );
+				background-position : center center;
+			}
+
+			.border
+			{
+				border-color  : #666;
+				border-radius : 10px;
+				border-style  : solid;
+				border-width  : 2px;
+			}
+
+			.center
+				{ text-align : center; }
+
+			.margin
+				{ margin : auto; }
+
+			.mkselect
+				{ border-color : #f00; }
+
+			.mktooltipcontainer
+				{ position : absolute; }
+
+			.mktooltip
+			{
+				background-color : #333;
+				border-color     : #333;
+				border-radius    : 5px;
+				border-style     : solid;
+				border-width     : 1px;
+				color            : #fff;
+				font-weight      : bold;
+				padding          : 2px;
+				position         : relative;
+				top              : -25px;
+			}
+
+			.padding
+				{ padding : 25px; }
+
+			.section
+				{ font-size : small; }
+		</style>
+
+		<script src="js/maker.js"></script>
+		<title>アイコンメーカー</title>
+	</head>
+
+	<body class="body">
+
+		<table class="bg border margin padding">
+
+			<tr>
+				<td colspan="2" class="center">
+
+					<h2>改造方法</h2>
+
+					<p>
+						htmlソースを読めばだいたい雰囲気でわかるようになっているのでごあんしんください。<br />
+						◆親切だ◆コピペでうごく◆わかりやすい◆
+					</p>
+
+					<p>
+						javascriptは一切いじる必要はありません。タグ追加すれば勝手に認識します。<br />
+						data-mkclip属性を指定するとマスク画像として認識され、合成時に白色の部分がマスクされて透明になります。<br />
+						data-mkcolor属性を指定すると線の色・塗りつぶしの色の設定が無視されます(つまりそのままの色で合成されます)
+					</p>
+
+					<p>
+						maker.jsには特にライセンスとか設定してないので自由に使ってください。<br />
+						同梱している画像の著作権については<a href="http://furrytail.sakura.ne.jp/">こ↑こ↓</a>を参照してください。
+					</p>
+
+					<img src="null.png" width="128" height="128" class="border" data-mkresult="true" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+
+					<h2 class="section">線の色</h2>
+
+						<span class="border block" style="background-color:#ff8080" data-mkline="1,0.5,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ff80" data-mkline="0.5,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#8080ff" data-mkline="0.5,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#80ffff" data-mkline="0.5,1,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ff80ff" data-mkline="1,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffff80" data-mkline="1,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#ffc080" data-mkline="1,0.75,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#ff80c0" data-mkline="1,0.5,0.75">&nbsp;</span>
+						<span class="border block" style="background-color:#c0ff80" data-mkline="0.75,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ffc0" data-mkline="0.5,1,0.75">&nbsp;</span>
+						<span class="border block" style="background-color:#c080ff" data-mkline="0.75,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#80c0ff" data-mkline="0.5,0.75,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffffff" data-mkline="1,1,1">&nbsp;</span><br />
+
+						<span class="border block" style="background-color:#ff0000" data-mkline="1,0,0">&nbsp;</span>
+						<span class="border block" style="background-color:#00ff00" data-mkline="0,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#0000ff" data-mkline="0,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#00ffff" data-mkline="0,1,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ff00ff" data-mkline="1,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffff00" data-mkline="1,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#ff8000" data-mkline="1,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#ff0080" data-mkline="1,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ff00" data-mkline="0.5,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#00ff80" data-mkline="0,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#8000ff" data-mkline="0.5,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#0080ff" data-mkline="0,0.5,1" data-mkselect="true">&nbsp;</span>
+						<span class="border block" style="background-color:#808080" data-mkline="0.5,0.5,0.5">&nbsp;</span><br />
+
+						<span class="border block" style="background-color:#800000" data-mkline="0.5,0,0">&nbsp;</span>
+						<span class="border block" style="background-color:#008000" data-mkline="0,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#000080" data-mkline="0,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#008080" data-mkline="0,0.5,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#800080" data-mkline="0.5,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#808000" data-mkline="0.6,0.6,0">&nbsp;</span>
+						<span class="border block" style="background-color:#804000" data-mkline="0.5,0.25,0">&nbsp;</span>
+						<span class="border block" style="background-color:#800040" data-mkline="0.5,0,0.25">&nbsp;</span>
+						<span class="border block" style="background-color:#408000" data-mkline="0.25,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#008040" data-mkline="0,0.5,0.25">&nbsp;</span>
+						<span class="border block" style="background-color:#400080" data-mkline="0.25,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#004080" data-mkline="0,0.25,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#000000" data-mkline="0,0,0">&nbsp;</span>
+
+				</td>
+
+				<td>
+
+					<h2 class="section">塗りつぶしの色</h2>
+
+						<span class="border block" style="background-color:#ff8080" data-mkfill="1,0.5,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ff80" data-mkfill="0.5,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#8080ff" data-mkfill="0.5,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#80ffff" data-mkfill="0.5,1,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ff80ff" data-mkfill="1,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffff80" data-mkfill="1,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#ffc080" data-mkfill="1,0.75,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#ff80c0" data-mkfill="1,0.5,0.75">&nbsp;</span>
+						<span class="border block" style="background-color:#c0ff80" data-mkfill="0.75,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ffc0" data-mkfill="0.5,1,0.75">&nbsp;</span>
+						<span class="border block" style="background-color:#c080ff" data-mkfill="0.75,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#80c0ff" data-mkfill="0.5,0.75,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffffff" data-mkfill="1,1,1" data-mkselect="true">&nbsp;</span><br />
+
+						<span class="border block" style="background-color:#ff0000" data-mkfill="1,0,0">&nbsp;</span>
+						<span class="border block" style="background-color:#00ff00" data-mkfill="0,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#0000ff" data-mkfill="0,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#00ffff" data-mkfill="0,1,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ff00ff" data-mkfill="1,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#ffff00" data-mkfill="1,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#ff8000" data-mkfill="1,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#ff0080" data-mkfill="1,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#80ff00" data-mkfill="0.5,1,0">&nbsp;</span>
+						<span class="border block" style="background-color:#00ff80" data-mkfill="0,1,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#8000ff" data-mkfill="0.5,0,1">&nbsp;</span>
+						<span class="border block" style="background-color:#0080ff" data-mkfill="0,0.5,1">&nbsp;</span>
+						<span class="border block" style="background-color:#808080" data-mkfill="0.5,0.5,0.5">&nbsp;</span><br />
+
+						<span class="border block" style="background-color:#800000" data-mkfill="0.5,0,0">&nbsp;</span>
+						<span class="border block" style="background-color:#008000" data-mkfill="0,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#000080" data-mkfill="0,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#008080" data-mkfill="0,0.5,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#800080" data-mkfill="0.5,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#808000" data-mkfill="0.6,0.6,0">&nbsp;</span>
+						<span class="border block" style="background-color:#804000" data-mkfill="0.5,0.25,0">&nbsp;</span>
+						<span class="border block" style="background-color:#800040" data-mkfill="0.5,0,0.25">&nbsp;</span>
+						<span class="border block" style="background-color:#408000" data-mkfill="0.25,0.5,0">&nbsp;</span>
+						<span class="border block" style="background-color:#008040" data-mkfill="0,0.5,0.25">&nbsp;</span>
+						<span class="border block" style="background-color:#400080" data-mkfill="0.25,0,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#004080" data-mkfill="0,0.25,0.5">&nbsp;</span>
+						<span class="border block" style="background-color:#000000" data-mkfill="0,0,0">&nbsp;</span>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td colspan="2">
+
+					<h2 class="section">ワンポイント</h2>
+						<img src="null.png"               width="64" height="64" alt="なし"            class="border" data-mklayer="4" />
+						<img src="decoration/fi.png"      width="64" height="64" alt="フリーアイコン"  class="border" data-mklayer="4" data-mkselect="true" />
+						<img src="decoration/fi2.png"     width="64" height="64" alt="フリーアイコン2" class="border" data-mklayer="4" />
+						<img src="decoration/privacy.png" width="64" height="64" alt="プライバシー"    class="border" data-mklayer="4" />
+
+					<h2 class="section">キャラクター</h2>
+
+						<img src="null.png"         width="64" height="64" alt="なし" class="border" data-mklayer="3" />
+						<img src="chara/dog.png"    width="64" height="64" alt="犬"   class="border" data-mklayer="3" data-mkselect="true" />
+						<img src="chara/cat.png"    width="64" height="64" alt="猫"   class="border" data-mklayer="3" />
+						<img src="chara/fox.png"    width="64" height="64" alt="狐"   class="border" data-mklayer="3" />
+						<img src="chara/racoon.png" width="64" height="64" alt="狸"   class="border" data-mklayer="3" />
+						<img src="chara/rabbit.png" width="64" height="64" alt="兎"   class="border" data-mklayer="3" />
+
+					<h2 class="section">背景フレーム</h2>
+
+						<img src="null.png"           width="64" height="64" alt="なし"     class="border" data-mklayer="2" />
+						<img src="frame/circle.png"   width="64" height="64" alt="円形"     class="border" data-mklayer="2" data-mkclip="true" data-mkselect="true" />
+						<img src="frame/rect.png"     width="64" height="64" alt="四角形"   class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/rhombus.png"  width="64" height="64" alt="菱形"     class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/circle-t.png" width="64" height="64" alt="半円(上)" class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/circle-b.png" width="64" height="64" alt="半円(下)" class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/star.png"     width="64" height="64" alt="星"       class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/cloud-t.png"  width="64" height="64" alt="雲(上)"   class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/cloud-b.png"  width="64" height="64" alt="雲(下)"   class="border" data-mklayer="2" data-mkclip="true" />
+						<img src="frame/bubble.png"   width="64" height="64" alt="泡"       class="border" data-mklayer="2" data-mkclip="true" />
+
+					<h2 class="section">背景</h2>
+
+						<img src="null.png"         width="64" height="64" alt="なし"             class="border" data-mklayer="1" />
+						<img src="bg/fill.png"      width="64" height="64" alt="塗りつぶし"       class="border" data-mklayer="1" />
+						<img src="bg/fill-r.png"    width="64" height="64" alt="塗りつぶし(反転)" class="border" data-mklayer="1" />
+						<img src="bg/stripe-v.png"  width="64" height="64" alt="縦縞"             class="border" data-mklayer="1" />
+						<img src="bg/stripe-h.png"  width="64" height="64" alt="縦縞"             class="border" data-mklayer="1" />
+						<img src="bg/radial.png"    width="64" height="64" alt="放射状"           class="border" data-mklayer="1" data-mkselect="true" />
+						<img src="bg/space.png"     width="64" height="64" alt="宇宙"             class="border" data-mklayer="1" />
+						<img src="bg/space-r.png"   width="64" height="64" alt="宇宙(反転)"       class="border" data-mklayer="1" />
+						<img src="bg/soot.png"      width="64" height="64" alt="スート"           class="border" data-mklayer="1" />
+						<img src="bg/soot-r.png"    width="64" height="64" alt="スート(反転)"     class="border" data-mklayer="1" /><br />
+						<img src="bg/dot.png"       width="64" height="64" alt="ドット"           class="border" data-mklayer="1" />
+						<img src="bg/dot-r.png"     width="64" height="64" alt="ドット(反転)"     class="border" data-mklayer="1" />
+						<img src="bg/orange.png"    width="64" height="64" alt="オレンジ"         class="border" data-mklayer="1" />
+						<img src="bg/orange-r.png"  width="64" height="64" alt="オレンジ(反転)"   class="border" data-mklayer="1" />
+						<img src="bg/mark.png"      width="64" height="64" alt="模様"             class="border" data-mklayer="1" />
+						<img src="bg/mark-r.png"    width="64" height="64" alt="模様(反転)"       class="border" data-mklayer="1" />
+						<img src="bg/2.0.png"       width="64" height="64" alt="web2.0"           class="border" data-mklayer="1" />
+						<img src="bg/macedonia.png" width="64" height="64" alt="マケドニア"       class="border" data-mklayer="1" data-mkcolor="true" />
+
+				</td>
+			</tr>
+
+		</table>
+
+	</body>
+
+</html>
+
